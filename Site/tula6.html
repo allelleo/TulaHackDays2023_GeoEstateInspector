@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<header>
+
+    <link rel="stylesheet" href="tula.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+      window.onload = function () {
+        document.body.classList.add('loaded_hiding');
+        window.setTimeout(function () {
+          document.body.classList.add('loaded');
+          document.body.classList.remove('loaded_hiding');
+        }, 500);
+      }
+    </script>
+    
+</header>
+
+<body>
+    <script src='tula.js'></script>
+    <script src='tula5.js'></script>
+    <div id = "wrap" class="header">
+      <div><h class="text">GeoEstateInspector</h></div>
+      <div><img class="img" src="Frame.png"></div>
+    </div>
+
+<div class="preloader">
+  <div class="preloader__row">
+    <div class="preloader__item"></div>
+    <div class="preloader__item"></div>
+  </div>
+</div>
+
+<div class="wrap-all-the-things"></div>
+
+
+<div class="login-page">
+    <div class="form"><br>
+    <!-- content содержит содержимое формы -->
+    <div class="content">
+
+        <!-- Правая колонка: сама форма -->
+        <div class="right-side">
+
+          <!-- Заголовок для формы -->
+          <div class="topic-text">Отправьте нам сообщение</div><br>
+
+          <!-- Какой-то дополнительный текст -->
+          <p>
+            Если у вас есть какие-то вопросы или предложения по сотрудничеству -
+            заполните форму ниже
+          </p><br>
+
+          <!-- Форма обратной связи -->
+          <form id="message_form" action="#">
+
+            <!-- Каждый input для выравнивания вкладываем в блок input-box -->
+            <div class="input-box message-box">
+              <input id="message_5" placeholder="Сообщение"></input>
+            </div>
+            <button class="button">Отправить</button>
+            
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-down">
+    Project by Oaks Dungeon
+
+  </div>
+
+  <div class="area"></div><nav class="main-menu">
+    <ul>
+      <li>&nbsp</li>
+      <li>&nbsp</li>
+        <li>&nbsp</li>
+        <li>&nbsp</li>
+        <li>&nbsp</li>
+        
+        <li class="has-subnav">
+            <a>
+
+                <div> <img class="imgmenu" src="help-web-button.png"></div>
+                <div><span class="nav-text">
+                    Связь
+                </span></div>
+            </a>
+            
+        </li>
+        <li>&nbsp</li>
+        <li>&nbsp</li>
+        <li class="has-subnav">
+            <a href="tula4.html"> 
+               <i class="fa fa-comments fa-2x"> <img class="imgmenu" style="margin-left: 0px;"src="home.png"> </i>
+                <span class="nav-text">
+                    Личный кабинет
+                </span>
+            </a>
+            
+        </li>
+        <li  style="margin-top: 15px;" class="has-subnav">
+            <a href="tula2.html">
+               <i class="fa fa-camera-retro fa-2x"><img class="imgmenu" style="margin-left: 0px;"src="upload-big-arrow.png"></i>
+                <span class="nav-text">
+                    Загрузить фото
+                </span>
+            </a>
+           
+        </li>
+        <li style="margin-top: 15px;">
+            <a href="tula3.html">
+                <i class="fa fa-film fa-2x"><img class="imgmenu" style="margin-left: 0px;"src="diskette.png"></i>
+                <span class="nav-text">
+                    Сохранённый
+                </span>
+                <span class="nav-text">
+                  результат<br>
+              </span>
+            </a>
+        </li><br>
+        <li style="margin-top: 0px;">
+            <a href="tula6.html">
+                <i class="fa fa-book fa-2x"><img class="imgmenu" style="margin-left: 0px;"src="help-web-button.png"></i>
+                <span class="nav-text">
+                   Обратная связь
+                </span>
+            </a>
+        </li>
+    </ul>
+
+    <ul class="logout">
+        <li>
+           <a href="tula.html">
+                 <i class="fa fa-power-off fa-2x"><img class="imgmenu" style="margin-left: 0px;"src="user.png"></i>
+                <span class="nav-text">
+                    Выход
+                </span>
+            </a>
+        </li>  
+    </ul>
+
+
+  </body>
+  </html>

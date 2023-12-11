@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<header>
+
+    <link rel="stylesheet" href="tula.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+      window.onload = function () {
+        document.body.classList.add('loaded_hiding');
+        window.setTimeout(function () {
+          document.body.classList.add('loaded');
+          document.body.classList.remove('loaded_hiding');
+        }, 500);
+      }
+    </script>
+    
+    
+</header>
+
+<body>
+    <script src='tula.js'></script>
+    <script src='tula3.js'></script>
+<div id = "wrap" class="header">
+	<div><h class="text">GeoEstateInspector</h></div>
+  <div><img class="img" src="Frame.png"></div>
+</div>
+
+<div id="openModal" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Войдите для просмотра информации</h3>
+        <a href="#close" title="Close" class="close">×</a>
+      </div>
+      <div class="modal-body">    
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="openModalTwo" class="modal2">
+  <div class="modal-dialog">
+    <div class="modal-content">x
+      <div class="modal-header">
+        <h3 class="modal-title">Пользователь не надйден, возможно неправильно указан email или логин</h3>
+        <a href="#close" title="Close" class="close">×</a>
+      </div>
+      <div class="modal-body">    
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="preloader">
+  <div class="preloader__row">
+    <div class="preloader__item"></div>
+    <div class="preloader__item"></div>
+  </div>
+</div>
+
+<div class="wrap-all-the-things"></div>
+
+
+<div class="login-page">
+    <div class="form">
+      <form class="register-form">
+        <input type="text" id="name0" placeholder="username"/>
+        <input type="text" id="name1" placeholder="first name"/>
+        <input type="text" id="name2" placeholder="last name"/>
+        <input type="email" id="email1" placeholder="email address"/>
+        <input type="password" id="password1" placeholder="password"/>
+        <button>Создать</button>
+        <p class="message">Уже зарегистрированы? <a href="#">Войти</a></p>
+      </form>
+      <form id="login-form" class="login-form">
+        <input type="text" id="username" placeholder="email"/>
+        <input type="password" id="password" placeholder="password"/>
+        <button>Войти</button>
+        <p class="message">Не зарегистрированы? <a id="create" href="#">Создать аккаунт</a></p>
+      </form>
+    </div>
+  </div>
+
+  <div class="text-down">
+    Project by Oaks Dungeon
+
+  </div>
+
+  <div class="area"></div><nav class="main-menu">
+    <ul>
+      <li>&nbsp</li>
+      <li>&nbsp</li>
+        <li>&nbsp</li>
+        <li>&nbsp</li>
+        <li>&nbsp</li>
+        
+        <li class="has-subnav">
+            <a>
+
+                <div> <img class="imgmenu" src="user.png"></div>
+                <div><span class="nav-text">
+                    Вход
+                </span></div>
+            </a>
+            
+        </li>
+        <li>&nbsp</li>
+        <li>&nbsp</li>
+        <li class="has-subnav">
+            <a href="#openModal"> 
+               <i class="fa fa-comments fa-2x"> <img class="imgmenu" style="margin-left: 0px;"src="home.png"> </i>
+                <span class="nav-text">
+                    Личный кабинет
+                </span>
+            </a>
+            
+        </li>
+        <li  style="margin-top: 15px;" class="has-subnav">
+            <a href="#openModal">
+               <i class="fa fa-camera-retro fa-2x"><img class="imgmenu" style="margin-left: 0px;"src="upload-big-arrow.png"></i>
+                <span class="nav-text">
+                    Загрузить фото
+                </span>
+            </a>
+           
+        </li>
+        <li style="margin-top: 15px;">
+            <a href="#openModal">
+                <i class="fa fa-film fa-2x"><img class="imgmenu" style="margin-left: 0px;"src="diskette.png"></i>
+                <span class="nav-text">
+                    Сохранённый
+                </span>
+                <span class="nav-text">
+                  результат<br>
+              </span>
+            </a>
+        </li><br>
+        <li style="margin-top: 0px;">
+            <a href="tula7.html">
+                <i class="fa fa-book fa-2x"><img class="imgmenu" style="margin-left: 0px;"src="help-web-button.png"></i>
+                <span class="nav-text">
+                   Обратная связь
+                </span>
+            </a>
+        </li>
+    </ul>
+
+    <ul class="logout">
+        <li>
+           <a href="tula.html">
+                 <i class="fa fa-power-off fa-2x"><img class="imgmenu" style="margin-left: 0px;"src="user.png"></i>
+                <span class="nav-text">
+                    Вход
+                </span>
+            </a>
+        </li>  
+    </ul>
+
+  </body>
+  </html>

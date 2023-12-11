@@ -1,0 +1,611 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+.fa-2x {
+font-size: 2em;
+}
+.fa {
+position: relative;
+display: table-cell;
+width: 60px;
+height: 36px;
+text-align: center;
+vertical-align: middle;
+font-size:20px;
+}
+
+
+.preloader {
+  /*фиксированное позиционирование*/
+  position: fixed;
+  /* координаты положения */
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  /* фоновый цвет элемента */
+  background: #e0e0e0;
+  /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+  z-index: 1003;
+}
+
+.preloader__row {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  margin-top: -35px;
+  margin-left: -35px;
+  text-align: center;
+  animation: preloader-rotate 2s infinite linear;
+}
+
+.preloader__item {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  background-color: #116115;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  animation: preloader-bounce 2s infinite ease-in-out;
+}
+
+.preloader__item:last-child {
+  top: auto;
+  bottom: 0;
+  animation-delay: -1s;
+}
+
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes preloader-bounce {
+
+  0%,
+  100% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader {
+  display: none;
+}
+
+.glass { z-index: 0; }
+
+.main-menu:hover,nav.main-menu.expanded {
+width:250px;
+overflow:visible;
+}
+
+.main-menu {
+background:#212121;
+border-right:0px solid #e5e5e5;
+position:absolute;
+top:0;
+bottom:0;
+height:100%;
+left:0;
+width:60px;
+overflow:hidden;
+-webkit-transition:width .05s linear;
+transition:width .05s linear;
+-webkit-transform:translateZ(0) scale(1,1);
+z-index:1000;
+}
+
+.main-menu>ul {
+margin:7px 0;
+}
+
+.main-menu li {
+position:relative;
+display:block;
+width:250px;
+}
+
+.main-menu li>a {
+position:relative;
+display:table;
+border-collapse:collapse;
+border-spacing:0;
+color:#999;
+ font-family: 'Montserrat';
+font-size: 14px;
+text-decoration:none;
+-webkit-transform:translateZ(0) scale(1,1);
+-webkit-transition:all .1s linear;
+transition:all .1s linear;
+  
+}
+
+.main-menu .nav-icon {
+position:relative;
+display:table-cell;
+width:60px;
+height:36px;
+text-align:center;
+vertical-align:middle;
+font-size:18px;
+}
+
+.main-menu .nav-text {
+margin-left: 10px;
+  font-family: 'Montserrat';
+}
+
+.main-menu>ul.logout {
+position:absolute;
+left:0;
+bottom:0;
+}
+
+.no-touch .scrollable.hover {
+overflow-y:hidden;
+}
+
+.no-touch .scrollable.hover:hover {
+overflow-y:auto;
+overflow:visible;
+}
+
+a:hover,a:focus {
+text-decoration:none;
+}
+
+nav {
+-webkit-user-select:none;
+-moz-user-select:none;
+-ms-user-select:none;
+-o-user-select:none;
+user-select:none;
+}
+
+nav ul,nav li {
+outline:0;
+margin:0;
+padding:0;
+}
+.main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
+color:#fff;
+}
+.area {
+float: left;
+background: #e2e2e2;
+width: 100%;
+height: 100%;
+}
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
+}
+
+
+
+*{padding:0; margin:0;}
+
+.hthree {
+  position: fixed; /* фиксированное положение */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5); /* фон */
+  z-index: 1050;
+  opacity: 0; /* по умолчанию модальное окно прозрачно */
+  -webkit-transition: opacity 200ms ease-in; 
+  -moz-transition: opacity 200ms ease-in;
+  transition: opacity 200ms ease-in; /* анимация перехода */
+  pointer-events: none; /* элемент невидим для событий мыши */
+  margin: 0;
+  padding: 0;
+}
+
+.modal2 {
+  position: fixed; /* фиксированное положение */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5); /* фон */
+  z-index: 1050;
+  opacity: 0; /* по умолчанию модальное окно прозрачно */
+  -webkit-transition: opacity 200ms ease-in; 
+  -moz-transition: opacity 200ms ease-in;
+  transition: opacity 200ms ease-in; /* анимация перехода */
+  pointer-events: none; /* элемент невидим для событий мыши */
+  margin: 0;
+  padding: 0;
+}
+
+.modal {
+  position: fixed; /* фиксированное положение */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5); /* фон */
+  z-index: 1050;
+  opacity: 0; /* по умолчанию модальное окно прозрачно */
+  -webkit-transition: opacity 200ms ease-in; 
+  -moz-transition: opacity 200ms ease-in;
+  transition: opacity 200ms ease-in; /* анимация перехода */
+  pointer-events: none; /* элемент невидим для событий мыши */
+  margin: 0;
+  padding: 0;
+}
+
+/* Стили для контейнера кнопки */
+.button {
+  display: inline-block; /* делаем блочно-строчный элемент */
+}
+
+/* Стили для самой кнопки */
+.button input[type="button"] {
+  color: #fff;
+  font-size: 18px;
+  background: #419152;;
+  outline: none;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 7px;
+  transition: 0.2s; /* чтобы плавно менялся цвет при наведении (:hover) */
+}
+
+/* Меняем цвет фона при наведении на кнопку */
+.button input[type="button"]:hover {
+  background-color: #59be6e;
+}
+
+.button input[type="button"]:active {
+  background-color: #2E703A;
+}
+
+/* Отдельно стилизуем поле сообщение */
+.input-box textarea {
+  resize: none; /* чтобы нельзя было менять высоту */
+  font-family: 'Montserrat';
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+/* Это контейнер для поля сообщение */
+.message-box {
+  min-height: 110px; /* минимальная высота 110px */
+  border: 0;
+}
+
+/* При отображении модального окно */
+.modal:target {
+  opacity: 1; /* делаем окно видимым */
+  pointer-events: auto; /* элемент видим для событий мыши */
+  overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
+}
+/* ширина модального окна и его отступы от экрана */
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+@media (min-width: 576px) {
+.modal-dialog {
+    max-width: 500px;
+    margin: 30px auto; /* отображение окна по центру */
+}
+}
+/* Стили для блока с контентом окна */ 
+.modal-content {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: .3rem;
+  outline: 0;
+}
+@media (min-width: 768px) {
+.modal-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+}
+/* Стили заголовка окна */
+.modal {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid #eceeef;
+}
+.modal-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.5;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+/* Стили кнопки "х" ("Закрыть")  */
+.close {
+  float: right;
+  font-family: 'Montserrat';
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: .5;
+  text-decoration: none;
+}
+/* Стили для закрывающей кнопки в фокусе или наведении */
+.close:focus, .close:hover {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: .75;
+}
+/* Стили блока основного содержимого окна */
+.modal-body {
+position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 15px;
+  overflow: auto;
+}
+
+.login-page {
+  width: 560px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  border-radius: 28px;
+  background: #FFFFFF;
+  max-width: 380px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: 'Montserrat';
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.imgmenu{
+  width: 45px;
+  margin-left: 7px;
+
+}
+
+.text-down{color: #F3F3F3;
+
+font-family: Montserrat;
+font-size: 35px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-align: center;
+}
+
+.img{
+width: 60px;
+float: right;
+margin-top: -65px;
+margin-right: 20px;
+}
+
+.text {color: #F3F3F3;
+  margin-top: 0%;
+margin-left: 20px;
+font-family: Montserrat;
+font-size: 56px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;}
+
+.otchet{
+  z-index: 1;
+  border-radius: 28px;
+  background: #FFFFFF;
+  max-width: 100%;  
+  margin-top: 100px;
+  text-align: center;
+  margin-left: 60px;
+}
+
+
+.form button {
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  border-radius: 28px;
+  outline: 0;
+  background: #005C28;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #003316;
+}
+.form .message {
+  margin: 15px 0 0;
+  font-size: 12px;
+  color: #005C28;
+  text-decoration: none;
+}
+
+.form .message a {
+  color: #005C28;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.container .info span .fa {
+  color: #EF3B3A;
+}
+
+.header{
+	width: 100%;
+	background: #005C28;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+	height: 80px;
+  z-index: 1002;
+  position: fixed;
+  top: 0;
+}
+
+.input-file {
+	position: relative;
+	display: inline-block;
+}
+.input-file-text {
+	padding: 0 10px;
+	line-height: 40px;
+	text-align: left;
+	height: 40px;
+	display: block;
+	float: left;
+	box-sizing: border-box;
+	width: 200px;
+	border-radius: 6px 0px 0 6px;
+	border: 1px solid #ddd;
+}
+.input-file-btn {
+position: relative;
+	display: inline-block;
+	cursor: pointer;
+	outline: none;
+	text-decoration: none;
+	font-size: 14px;
+	vertical-align: middle;
+	color: rgb(255 255 255);
+	text-align: center;
+	border-radius: 0 4px 4px 0;
+	background-color: #005C28;
+	line-height: 22px;
+	height: 40px;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	border: none;
+	margin: 0;
+	transition: background-color 0.2s;
+}
+.input-file input[type=file] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+ 
+/* Focus */
+.input-file input[type=file]:focus + .input-file-btn {
+	box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+ 
+/* Hover/active */
+.input-file:hover .input-file-btn {
+	background-color: #003316;
+}
+.input-file:active .input-file-btn {
+	background-color: #003316;
+}
+ 
+/* Disabled */
+.input-file input[type=file]:disabled + .input-file-btn {
+	background-color: #eee;
+}
+
+body {
+  background: linear-gradient(104deg, #00D96F 2.28%, #00713A 99.66%) no-repeat center center fixed;
+  background-size: 100%;
+  font-family: 'Montserrat';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;      
+}
